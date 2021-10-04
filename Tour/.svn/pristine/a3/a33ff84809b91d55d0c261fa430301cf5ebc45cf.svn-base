@@ -1,0 +1,211 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/head.jsp"%>
+<style>
+	.button    
+	{
+		display: block;
+	    margin-left: -5px;
+	    padding-left: 20px;
+	    background:url(../img/button.png) 0 70% no-repeat;
+	    color: #000;
+	}
+		
+	ul
+	{
+	    padding: 0 20px 6px 20px;
+	}
+		
+	th
+	{
+		color:#FFFFFF;
+		cursor : pointer;
+		background-size: 400px;
+	}	
+	
+	
+	
+		
+	li
+	{
+		background:url(../img/line_leftobj.png) 0 0 repeat-y;
+		line-height: 20px;
+   		padding: 10px 0;
+   	}		
+</style>
+<tr>
+	<td align="center">
+		<table border="1" width="80%" align="center">
+			<b><font size=10>힐링여행코스</font></b>
+			<tr>
+				<th style="width:15%; height:130px; background-image: url(../img/jeonju.jpg)"><h1>전주 여행</h1></th>
+				<th style="width:15%; height:130px; background-image: url(../img/iksan.jpg)"><h1>익산 여행</h1></th>
+				<th style="width:15%; height:130px; background-image: url(../img/gunsan.jpg)"><h1>군산 여행</h1></th>
+				<th style="width:15%; height:130px; background-image: url(../img/jeong.jpg)"><h1>정읍 여행</h1></th>
+			</tr>
+			<tr>
+				<td style="height:280px;" valign="top">
+				<ul>
+					<li>
+						<span class="button">전주한옥마을</span>
+					</li>
+					<li>
+						<span class="button">전주카페(마시랑게)</span>
+					</li>
+					<li>	
+						<span class="button">객리단길</span>
+					</li>
+					<li>
+						<span class="button">전주수목원</span>
+					</li>
+					<li>
+						<span class="button">스타디움오브독스</span>
+					</li>
+				</ul>
+				</td>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">익산맛집</span>
+					</li>
+					<li>
+						<span class="button">익산카페</span>
+					</li>
+					<li>	
+						<span class="button">영등동</span>
+					</li>
+					<li>
+						<span class="button">모현동</span>
+					</li>
+					<li>
+						<span class="button">미륵사지</span>
+					</li>
+				</ul>
+				</td>	
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">초원사진관</span>
+					</li>
+					<li>
+						<span class="button">철길마을</span>
+					</li>
+					<li>	
+						<span class="button">이성당</span>
+					</li>
+					<li>
+						<span class="button">군산근대역사박물관</span>
+					</li>
+					<li>
+						<span class="button">선유도</span>
+					</li>
+				</ul>
+				</td>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">내장산</span>
+					</li>
+					<li>
+						<span class="button">허브원</span>
+					</li>
+					<li>	
+						<span class="button">정읍수성동</span>
+					</li>
+					<li>
+						<span class="button">정읍상동</span>
+					</li>
+					<li>
+						<span class="button">정읍맛집</span>
+					</li>
+				</ul>
+				</td>
+			</tr>
+			<tr>
+				<th style="width:15%; height:130px; background-image: url(../img/gimje.jpg)"><h1>김제 여행</h1></th>
+				<th style="width:15%; height:130px; background-image: url(../img/wanju.jpg)"><h1>완주 여행</h1></th>			
+				<th style="width:15%; height:130px; background-image: url(../img/imsil.jpg)"><h1>임실 여행</h1></th>		
+				<th style="width:15%; height:130px; background-image: url(../img/buan.jpg)"><h1>부안 여행</h1></th>
+			</tr>
+			<tr>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">김제1</span>
+					</li>
+					<li>
+						<span class="button">김제2</span>
+					</li>
+					<li>	
+						<span class="button">김제3</span>
+					</li>
+					<li>
+						<span class="button">김제4</span>
+					</li>
+					<li>
+						<span class="button">김제5</span>
+					</li>
+				</ul>
+				</td>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">코스1</span>
+					</li>
+					<li>
+						<span class="button">코스2</span>
+					</li>
+					<li>	
+						<span class="button">코스3</span>
+					</li>
+					<li>
+						<span class="button">코스4</span>
+					</li>
+					<li>
+						<span class="button">코스5</span>
+					</li>
+				</ul>
+				</td>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">코스1</span>
+					</li>
+					<li>
+						<span class="button">코스2</span>
+					</li>
+					<li>	
+						<span class="button">코스3</span>
+					</li>
+					<li>
+						<span class="button">코스4</span>
+					</li>
+					<li>
+						<span class="button">코스5</span>
+					</li>
+				</ul>
+				</td>
+				<td style="height:280px;"valign="top">
+				<ul>
+					<li>
+						<span class="button">코스1</span>
+					</li>
+					<li>
+						<span class="button">코스2</span>
+					</li>
+					<li>	
+						<span class="button">코스3</span>
+					</li>
+					<li>
+						<span class="button">코스4</span>
+					</li>
+					<li>
+						<span class="button">코스5</span>
+					</li>
+				</ul>
+				</td>
+			</tr>	
+			</table>
+	</td>
+</tr>
+<%@ include file="../include/tail.jsp"%>	

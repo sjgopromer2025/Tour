@@ -1,0 +1,50 @@
+package tourDTO;
+import java.util.ArrayList;
+
+import tourVO.*;
+
+public class naverDTO extends CommonDTO
+{
+	String sql;
+	naverVO nav_vo;
+	String w_pic;
+	
+	public String Read(String loc, String nav_week)
+	{
+		nav_vo = new naverVO();
+		try
+		{
+			
+			this.OpenDB();
+					
+			sql = "";
+			sql += "select w_pic ";
+			sql += "from word ";
+			sql += "where w_place='"+loc+"' and w_sep=1 and w_week='"+nav_week+"' ";
+			System.out.println(sql);
+			
+			this.RunQuery(sql);
+			
+			while(this.GetNextResult() == true)
+			{
+				//commnetVO를 만든후 세팅하고 naverList에 저장
+				
+				nav_vo.setW_pic(this.GetValue("w_pic"));
+				
+				w_pic = nav_vo.getW_pic();
+			}
+			
+			
+			this.CloseQuery(); 
+			this.CloseDB();
+		}catch (Exception e) 
+		{
+			e.printStackTrace();
+			return null;
+		}
+		
+		return w_pic;
+	}
+		
+	
+}

@@ -1,0 +1,93 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/head.jsp"%>
+<style>
+	.analysis
+	{
+		width: 750px;
+		height: 550px;
+	}
+	
+	select > option
+	{
+		text-align: center;
+	}
+</style>
+<script>
+
+function ch() 
+{
+	$.ajax({
+		url: "naverok.jsp",
+		type: "post",
+		dataType: "html",
+		data: "loc=" + $("select[name=loc]").val()+"&nav_week=" + $("select[name=nav_week]").val(),
+		success : function(data) 
+		{
+			data = data.trim();
+			$("#blog").attr("src", "../nav_image/"+data);
+
+			//alert(data);
+		},
+		error: function(request, status, error) 
+		{
+			alert("error!!!");
+		}
+	});	
+}	
+
+</script>
+<tr>
+	<td style="width: 100%">
+		<table  border="1" style="width: 100%">
+			<caption><h1>지역분석 > 네이버</h1></caption>
+			<tr>
+				<td colspan="2">
+					<select style="width: 150px; height: 50px; font-size: 18pt; text-align-last:center;" id="loc" name="loc" onchange="javascript:ch();">
+						<option value="군산">군산</option>
+						<option value="김제">김제</option>
+						<option value="부안">부안</option>
+						<option value="완주">완주</option>
+						<option value="익산">익산</option>
+						<option value="임실">임실</option>
+						<option value="전주">전주</option>
+						<option value="정읍">정읍</option>
+					</select>
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<h1>블로그</h1>
+					<select style="width: 150px; height: 50px; font-size: 18pt; text-align-last:center;" id="nav_week" name="nav_week" onchange="javascript:ch();">
+						<option value="1">8월 둘째주</option>
+						<option value="2">8월 셋째주</option>
+						<option value="3">8월 넷째주</option>
+						<option value="4">9월 첫째주</option>
+					</select>
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<img class="analysis" id="blog" src="../nav_image/n_gunsan.jpg">
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<h1>그래프</h1>
+				</td>
+				<td>
+					<h1>인기키워드</h1>
+				</td>
+			</tr>
+			<tr align="center">
+					<td>
+					<img class="analysis" src="../nav_image/n_gunsan.jpg">
+				</td>
+				<td>
+					<img class="analysis" src="../nav_image/n_gunsan.jpg">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<%@ include file="../include/tail.jsp"%>	

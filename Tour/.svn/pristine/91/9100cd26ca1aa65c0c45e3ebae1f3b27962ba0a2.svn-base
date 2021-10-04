@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.line {
+	background-color: lightgray;
+}
+
+ul, ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.menuList {
+	
+}
+
+ul.menuList>li {
+	display: inline-block;
+	width: 200px;
+	height: 27px;
+	padding: 5px 0px;
+	background: #ffffff;
+	text-align: center;
+	border: 1px solid #eeee;
+	text-align: center;
+	position: relative
+}
+
+ul.menuList>li:hover {
+	background: #f4f4f4;
+}
+
+ul.menuList>li ul.subMenu {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+
+ul.menuList>li:hover ul.subMenu {
+	display: block;
+}
+
+ul.menuList>li ul.subMenu>li {
+	width: 200px;
+	padding: 5px 0px;
+	background: #eee;
+	border: 1px solid #eee;
+	text-align: center;
+}
+
+ul.menuList>li:hover ul.subMenu {
+	z-index: 50;
+	display: block;
+}
+
+li.menuArea {
+	background: white !important;
+}
+
+li.menuCourse {
+	background: white !important;
+}
+
+li.menuWorldcup {
+	background: white !important;
+}

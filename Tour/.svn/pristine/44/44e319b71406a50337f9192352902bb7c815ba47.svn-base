@@ -1,0 +1,21 @@
+<%@ include file="../include/head.jsp"%>
+<%
+String place = request.getParameter("place");
+if(place == null || place.equals(""))
+{
+  response.sendRedirect("../main/main.jsp");
+}
+%>
+<tr>
+	<td align="center">
+		<%=place %> 여행
+	</td>
+<tr>
+<tr>
+	<td align="center">
+		<div id="map" style="width:1080px;height:680px;"></div>
+	</td>
+<tr>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4bd65ce2e22f171c4f6a67f3ad9f60e5"></script>
+<script src="../JS/loadmap.js"></script>
+<%@ include file="../include/tail.jsp"%>

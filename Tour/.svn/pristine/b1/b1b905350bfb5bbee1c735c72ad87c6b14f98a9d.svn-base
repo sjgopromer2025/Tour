@@ -1,0 +1,95 @@
+<!-- 익산페이지 -->
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/head.jsp"%>
+<br>
+<br>
+<td>
+      <title>Iksan</title>
+      <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+      <link rel="stylesheet" href="../CSS/style.css">
+      <section class="banner_main">
+         <div class="container-fluid">
+            <div class="row d_flex ">
+               <div class="col-xl-4 col-lg-4 col-md-12">
+                  <div class="banner_main_text">
+                  <br><br>
+                     <img class="logo" src="../img/iilogo.JPG" alt="#"/>
+                  </div>
+               </div>
+               <div class="col-xl-8 col-lg-8 col-md-12 padding_right">
+                  <div class="banner_main_img">
+                  <br><br>
+                     <figure><img src="../img/iii.JPG" alt="#"/>
+                     </figure>
+					<br><br>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <hr>
+     <div id="our"  class="our">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-xl-5 col-lg-5 col-md-12 order_2">
+                  </div>
+               </div>
+               <div class="col-xl-7 col-lg-7 col-md-12 padding_right order_1">
+                  <div class="our_img">
+                  <h1>INSTAGRAM</h1>
+                     <figure><img src="../img/22.JPG" alt="#"/></figure>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="col-xl-5 col-lg-5 col-md-12">
+                  
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="our"  class="our">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-xl-5 col-lg-5 col-md-12 order_2">
+                  </div>
+               </div>
+               <div class="col-xl-7 col-lg-7 col-md-12 padding_right order_1">
+                  <div class="our_img">
+                  <h1>NAVER</h1>
+                     <figure><img src="../img/22.JPG" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="cont">
+                        <h3>i want to go home</h3>
+                        <p>free free free doby is free
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Copyright 2021 All Right Reserved By EZEN</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+</td>
+<%@ include file="../include/tail.jsp"%>	

@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/head.jsp"%>
+<script src="../JS/insta_graph.js"></script>
+<script src="../JS/loadinsta.js"></script>
+<style>
+	.analysis
+	{
+		width: 850px;
+		height: 850px;
+	}
+	
+	select > option
+	{
+		text-align: center;
+	}
+	
+	.container_graph
+	{
+		width: 850px;
+		height: 850px;
+	}
+</style>
+<tr>
+	<td style="width: 100%">
+		<table  border="1" style="width: 100%">
+			<caption><h1>지역분석 > 인스타그램</h1></caption>
+			<tr>
+				<td colspan="2">
+					<select id="jeonbuk" onchange="javascript:change()" style="width: 150px; height: 50px; font-size: 18pt; text-align-last:center; ">
+						<option value="gunsan">군산</option>
+						<option value="gimje">김제</option>
+						<option value="buan">부안</option>
+						<option value="wanju">완주</option>
+						<option value="iksan">익산</option>
+						<option value="imsil">임실</option>
+						<option value="jeonju">전주</option>
+						<option value="jeongep">정읍</option>
+					</select>	
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<h1>해쉬태그</h1>
+				</td>
+				<td>
+					<h1>장소</h1>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img class="analysis" id="tag" >
+				</td>
+				<td>
+					<img class="analysis" id="place">
+				</td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<h1>그래프</h1>
+				</td>
+			</tr>
+			<tr align="center" height="600px">
+				<td colspan="2">
+					<div id="container_graph" style="width: 100%; height: 100%"></div>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<%@ include file="../include/tail.jsp"%>	

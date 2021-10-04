@@ -1,0 +1,112 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/head.jsp"%>
+<style>
+	.analysis
+	{
+		width: 850px;
+		height: 850px;
+	}
+	
+	select > option
+	{
+		text-align: center;
+	}
+	
+	.container_graph
+	{
+		width: 850px;
+		height: 850px;
+	}
+</style>
+<script src="../JS/insta_graph.js"></script>
+<script>
+$(document).ready(function(){
+	change();
+});
+function change()
+{
+	var selectjeonbuk = document.getElementById("jeonbuk");
+
+	var selectedValue = selectjeonbuk.options[selectjeonbuk.selectedIndex].value;
+	// select element에서 선택된 option의 text가 저장된다.
+    var selectedText = selectjeonbuk.options[selectjeonbuk.selectedIndex].text;
+	//alert(selectedValue);
+	//alert(selectedText);
+	$.ajax({
+		url: "../ajax/instaload.jsp",
+		type: "post",
+		dataType: "html",
+		data: "word="+selectedText,
+		success : function(data) 
+		{
+			data = data.trim();
+			//alert(data);	
+			pic_arr = data.split("<<SEP>>");
+			$("#tag").attr("src", "../Instagram/"+pic_arr[0]); //해시태그
+			$("#place").attr("src", "../Instagram/"+pic_arr[1]); //장소
+			
+			drawBar(pic_arr[2],pic_arr[3]);
+		},
+		error: function(request, status, error) 
+		{
+			alert("error!!!");
+		}
+	});	
+}
+</script>
+<tr>
+	<td style="width: 100%">
+		<table  border="1" style="width: 100%">
+			<caption><h1>지역분석 > 인스타그램</h1></caption>
+			<tr>
+				<td colspan="2">
+					<select id="jeonbuk" onchange="javascript:change()" style="width: 150px; height: 50px; font-size: 18pt; text-align-last:center; ">
+						<option value="gunsan">군산</option>
+						<option value="gimje">김제</option>
+						<option value="buan">부안</option>
+						<option value="wanju">완주</option>
+						<option value="iksan">익산</option>
+						<option value="imsil">임실</option>
+						<option value="jeonju">전주</option>
+						<option value="jeongep">정읍</option>
+					</select>	
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<h1>해쉬태그</h1>
+				</td>
+				<td>
+					<h1>장소</h1>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img class="analysis" id="tag" >
+				</td>
+				<td>
+					<img class="analysis" id="place">
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<h1>그래프</h1>
+				</td>
+				<td>
+					<h1>인기키워드</h1>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+				<div id="container_graph" style="width: 1000px; height: 500px">
+				</div>
+				</td>
+				<td>
+					<img class="analysis" src="../images/04.jpg">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<%@ include file="../include/tail.jsp"%>	

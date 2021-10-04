@@ -1,0 +1,26 @@
+$(document).ready(function(){
+	ch();
+});
+
+function ch() 
+{
+	
+	$.ajax({
+		url: "../ajax/naverok.jsp",
+		type: "post",
+		dataType: "html",
+		data: "loc=" + $("select[name=loc]").val()+"&nav_week=" + $("select[name=nav_week]").val(),
+		success : function(data) 
+		{
+			data = data.trim();
+			data_arr = data.split("<<SEP>>"); 
+			$("#blog").attr("src", "../nav_image/"+data_arr[0]);
+			n_drawBar(data_arr[1],data_arr[2]);
+			//alert(data);
+		},
+		error: function(request, status, error) 
+		{
+			alert("error!!!");
+		}
+	});	
+}	

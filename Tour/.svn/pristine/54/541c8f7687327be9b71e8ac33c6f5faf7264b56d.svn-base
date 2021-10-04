@@ -1,0 +1,21 @@
+package tourVO;
+
+public class naverVO 
+{
+	String w_no;
+	String w_place;
+	String w_pic;
+	String w_sep;
+	
+	public String getW_no() 				{	return w_no;			}
+	public void setW_no(String w_no) 		{	this.w_no = w_no;		}
+	public String getW_place() 				{	return w_place;			}
+	public void setW_place(String w_place) 	{	this.w_place = w_place;	}
+	public String getW_pic() 				{	return w_pic;			}
+	public void setW_pic(String w_pic) 		{	this.w_pic = w_pic;		}
+	public String getW_sep() 				{	return w_sep;			}
+	public void setW_sep(String w_sep) 		{	this.w_sep = w_sep;		}
+	
+	
+	
+}

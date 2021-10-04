@@ -1,0 +1,13 @@
+insert into word
+(w_place , w_pic, w_sep)
+values
+('군산', 'n_gunsan.jpg', 1),
+('김제', 'n_gimje.jpg', 1),
+('부안', 'n_buan.jpg', 1),
+('완주', 'n_wanju.jpg', 1),
+('익산', 'n_iksan.jpg', 1),
+('임실', 'n_imsil.jpg', 1),
+('전주', 'n_jeonju.jpg', 1),
+('정읍', 'n_jeongeup.jpg', 1);
+
+
